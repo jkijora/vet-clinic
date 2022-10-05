@@ -2,8 +2,10 @@ package eu.kijora.app;
 
 import eu.kijora.app.domain.Animal;
 import eu.kijora.app.domain.Doctor;
+import eu.kijora.app.domain.Visit;
 import eu.kijora.app.repository.AnimalRepository;
 import eu.kijora.app.repository.DoctorRepository;
+import eu.kijora.app.repository.VisitRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -22,7 +24,7 @@ public class AppApplication {
 	}
 
 	@Bean
-	public CommandLineRunner demo(AnimalRepository ar, DoctorRepository dr) {
+	public CommandLineRunner demo(AnimalRepository ar, DoctorRepository dr, VisitRepository vr) {
 		return (args) -> {
 			Doctor doc = new Doctor("Maciej", List.of(), 5000);
 			dr.save(doc);
@@ -40,6 +42,8 @@ public class AppApplication {
 
 			dr.save(doc2);
 
+			Visit visit = new Visit(doc2);
+			vr.save(visit);
 
 			log.info("Customer found with findByLastName('Bauer'):");
 			log.info("--------------------------------------------");
