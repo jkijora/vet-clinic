@@ -1,0 +1,9 @@
+2022-10-04 20:53:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "ANIMALS" not found (this database is empty); SQL statement:
+select a1_0.id,a1_0.birthday,a1_0.name,a1_0.registration_date,a1_0.weight from animals a1_0 where a1_0.id=? [42104-214]
+2022-10-04 21:01:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "ANIMALS" not found (this database is empty); SQL statement:
+select a1_0.id,a1_0.birthday,a1_0.name,a1_0.registration_date,a1_0.weight from animals a1_0 where a1_0.id=? [42104-214]
+2022-10-04 21:01:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "ANIMALS" not found (this database is empty); SQL statement:
+select a1_0.id,a1_0.birthday,a1_0.name,a1_0.registration_date,a1_0.weight from animals a1_0 where a1_0.id=? [42104-214]
